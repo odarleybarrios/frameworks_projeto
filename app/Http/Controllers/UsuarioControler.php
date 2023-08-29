@@ -16,4 +16,14 @@ class UsuarioControler extends Controller
 
    }
 
+   public function index(){
+      return Usuario::all();
+   }
+
+   public function show($id){
+      return Usuario::find($id);
+   }
 }
+
+
+
