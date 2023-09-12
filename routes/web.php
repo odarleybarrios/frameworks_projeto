@@ -18,6 +18,8 @@ Route::get('usuario', 'App\Http\Controllers\UsuarioControler@index');
 
 Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@show');
 
+Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@delete');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,4 +27,6 @@ Route::get('/', function () {
 Route::get('/t', function () {
     return view('welcome');
 });
+
+
 
