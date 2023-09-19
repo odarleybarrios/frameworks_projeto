@@ -16,12 +16,12 @@ class UsuarioControler extends Controller
 
    }
 
-   
+
 
    public function index(){
       $usuarios = Usuario::all();
       return view('usuario.listar')
-      ->with('meuUsuario', $usuarios[0]);
+      ->with('meusUsuarios', $usuarios);
    }
 
 

@@ -17,9 +17,15 @@ class UsuariosTableSeeder extends Seeder
             'nome'=>'João Silva',
             'email'=>'joao.silva@email.com',
 
+
         ]);
 
+        Usuario::create([
+            'nome'=> 'Jose barbosa',
+            'email'=>'jose.barbosa@email.com',
 
+
+        ]);
         //
     }
 }
