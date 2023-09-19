@@ -20,6 +20,10 @@ Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@show');
 
 Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@delete');
 
+Route::post('novo-usuario', 'App\Http\Controllers\UsuarioControler@salvarUsuario');
+
+Route::get('novo-usuario', 'App\Http\Controllers\UsuarioControler@novoUsuario');
+
 Route::get('/', function () {
     return view('welcome');
 });

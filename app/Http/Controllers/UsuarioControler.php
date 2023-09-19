@@ -33,6 +33,14 @@ class UsuarioControler extends Controller
       $usuario = Usuario::find($id);
       $usuario->delete();
    }
+
+   public function salvarUsuario(Request $request) {
+      return $request->all();
+   }
+
+   public function criarUsuario(){
+      return view('usuario.novoUsuario');
+   }
 }
 
 
