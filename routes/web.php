@@ -12,25 +12,20 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('usuario', 'App\Http\Controllers\UsuarioControler@verPost');
+Route::get('usuarios', 'App\Http\Controllers\UsuarioControler@index')->name('usuario.listar');
 
-Route::get('usuario', 'App\Http\Controllers\UsuarioControler@index');
+Route::get('usuarios/novo', 'App\Http\Controllers\UsuarioControler@criar');
 
-Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@show');
+Route::get('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@mostrar');
 
-Route::get('usuario/{id}', 'App\Http\Controllers\UsuarioControler@delete');
+Route::get('usuarios/{id}/editar', 'App\Http\Controllers\UsuarioControler@editar');
 
-Route::post('novo-usuario', 'App\Http\Controllers\UsuarioControler@salvarUsuario');
+Route::post('usuarios', 'App\Http\Controllers\UsuarioControler@salvar');
 
-Route::get('novo-usuario', 'App\Http\Controllers\UsuarioControler@novoUsuario');
+Route::put('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@atualizar');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/t', function () {
-    return view('welcome');
-});
+
 
 
 

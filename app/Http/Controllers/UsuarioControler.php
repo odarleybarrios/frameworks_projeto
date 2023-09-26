@@ -16,17 +16,45 @@ class UsuarioControler extends Controller
 
    }
 
-
-
    public function index(){
       $usuarios = Usuario::all();
-      return view('usuario.listar')
-      ->with('meusUsuarios', $usuarios);
+      return view('usuario.listar')->with('meusUsuarios', $usuarios);
+
    }
 
+   public function editar($id){
+      $usuario = Usuario::find($id);
+      return view('usuario.editar')->with('usuario', $usuario);
 
-   public function show($id){
-      return Usuario::find($id);
+   }
+
+   public function criar(){
+      return view('usuario.novoUsuario');
+
+   }
+
+   public function salvar(Request $request){
+      $usuario = new Usuario();
+      $usuario->nome = $request ->nome;
+      $usuario->senha = bcrypt($request ->senha) ;
+      $usuario->email= $request ->email;
+      $usuario->save();
+
+   }
+   public function atualizar($id){
+      $usuario = Usuario::find($id);
+      $usuario->nome = $request ->nome;
+      $usuario->senha = $request ->senha ;
+      $usuario->email= $request ->email;
+      $usuario->save();
+
+      return redirect()->route('usuario.listar');
+
+
+   }
+
+   public function mostrar(){
+
    }
 
    public function delete($id){
