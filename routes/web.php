@@ -20,7 +20,7 @@ Route::get('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@mostrar');
 
 Route::get('usuarios/{id}/editar', 'App\Http\Controllers\UsuarioControler@editar');
 
-Route::post('usuarios', 'App\Http\Controllers\UsuarioControler@salvar');
+Route::post('usuarios', 'App\Http\Controllers\UsuarioControler@salvar')->name('novo-usuario');
 
 Route::put('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@atualizar');
 

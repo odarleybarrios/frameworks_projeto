@@ -5,7 +5,7 @@
 
  <body>
    <h1>Novo Usuário</h1>
-   <form action="{{url('novo-usuario')}}"method="post">
+   <form action="{{route('novo-usuario')}}"method="post">
 
     @csrf
     <label for="nome">Nome</label>

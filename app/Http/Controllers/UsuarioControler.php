@@ -40,6 +40,8 @@ class UsuarioControler extends Controller
       $usuario->email= $request ->email;
       $usuario->save();
 
+      return redirect()->route('usuario.listar');
+
    }
    public function atualizar($id){
       $usuario = Usuario::find($id);
