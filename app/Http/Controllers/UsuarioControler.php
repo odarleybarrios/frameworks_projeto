@@ -43,7 +43,7 @@ class UsuarioControler extends Controller
       return redirect()->route('usuario.listar');
 
    }
-   public function atualizar($id){
+   public function atualizar(Request $request, $id){
       $usuario = Usuario::find($id);
       $usuario->nome = $request ->nome;
       $usuario->senha = $request ->senha ;
