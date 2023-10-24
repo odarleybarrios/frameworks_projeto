@@ -16,6 +16,7 @@ class UsuariosTableSeeder extends Seeder
         Usuario::create([
             'nome'=>'João Silva',
             'email'=>'joao.silva@email.com',
+            'senha'=>'654321'
 
 
         ]);
@@ -23,6 +24,7 @@ class UsuariosTableSeeder extends Seeder
         Usuario::create([
             'nome'=> 'Jose barbosa',
             'email'=>'jose.barbosa@email.com',
+            'senha'=>'123456'
 
 
         ]);
