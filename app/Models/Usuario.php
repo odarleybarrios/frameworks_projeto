@@ -13,8 +13,11 @@ class Usuario extends Model
         'nome',
         'email',
     ];
-    public function posts()
+
+    protected $with = ['enderecos'];
+
+    public function enderecos()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Enderecos::class);
     }
 }

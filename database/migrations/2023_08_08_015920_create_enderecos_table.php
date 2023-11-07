@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('conteudo');
+            $table->string('Rua');
+            $table->string('Cep');
             $table->unsignedBigInteger('usuario_id');//Chave estrangeira para usuário
             $table->timestamps();
 
