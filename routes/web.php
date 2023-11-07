@@ -24,6 +24,8 @@ Route::post('usuarios', 'App\Http\Controllers\UsuarioControler@salvar')->name('n
 
 Route::put('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@atualizar')->name('usuario.atualizar');
 
+Route::delete('usuarios/{id}', 'App\Http\Controllers\UsuarioControler@delete')->name('usuario.deletar');
+
 
 
 

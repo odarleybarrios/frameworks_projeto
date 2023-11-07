@@ -19,7 +19,14 @@
 
     <td> <a href="{{route('usuario.editar',$usuario->id)}}"> Editar Usuário </a> </td>
 
-    <td>Deletar</td>
+    <td>
+        <form action="{{route('usuario.deletar', $usuario->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+
+            <button type="submit" onclick="return confirm('Tem certeza que quer deletar?');">Deletar</button>
+
+    </td>
 </tr>
 
  @empty
