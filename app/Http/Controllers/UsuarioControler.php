@@ -8,17 +8,19 @@ use Illuminate\Http\Request;
 
 class UsuarioControler extends Controller
 {
-   public function verPost(){
 
-    $usuario = Usuario::first();
-
-    print($usuario);
-
-   }
 
    public function index(){
-      $usuarios = Usuario::all();
-      return view('usuario.listar')->with('meusUsuarios', $usuarios);
+
+       $usuarios = Usuario::with(['enderecos.propriedade'])->get();
+       return $usuarios;
+       return view('usuario.listar')->with('meusUsuarios', $usuarios);
+
+       //      $usuarios = Usuario::all();
+//       return view('users', compact('users'));
+
+
+//      return view('usuario.listar')->with('meusUsuarios', $usuarios);
 
    }
 
@@ -62,7 +64,7 @@ class UsuarioControler extends Controller
    public function delete($id){
       $usuario = Usuario::find($id);
       $usuario->delete();
-      
+
       return redirect()->route('usuario.listar');
    }
 

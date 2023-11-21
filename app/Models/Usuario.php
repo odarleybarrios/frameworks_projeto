@@ -9,15 +9,15 @@ class Usuario extends Model
 {
     use HasFactory;
     protected $table = 'usuarios';
+
+//    protected $with = ['enderecos'];
     protected $fillable = [
         'nome',
         'email',
     ];
 
-    protected $with = ['enderecos'];
-
     public function enderecos()
     {
-        return $this->hasMany(Enderecos::class);
+        return $this->hasMany(Endereco::class);
     }
 }
