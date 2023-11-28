@@ -14,7 +14,8 @@ class EnderecoSeeder extends Seeder
     public function run(): void
     {
         Endereco::create([
-            'nome'=>'Casa Ouro Preto',
+            'rua'=>'Casa Ouro Preto',
+            'cep' => '3423432',
             'usuario_id'=>1
         ]);
     }

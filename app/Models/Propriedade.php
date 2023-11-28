@@ -11,7 +11,7 @@ class Propriedade extends Model
 
     protected $table = 'propriedades';
 
-    protected $fillable = ['rua'];
+    protected $fillable = ['nome', 'endereco_id'];
 
     public function endereco()
     {
