@@ -13,7 +13,6 @@ class UsuarioControler extends Controller
    public function index(){
 
        $usuarios = Usuario::with(['enderecos.propriedade'])->get();
-       return $usuarios;
        return view('usuario.listar')->with('meusUsuarios', $usuarios);
 
        //      $usuarios = Usuario::all();
